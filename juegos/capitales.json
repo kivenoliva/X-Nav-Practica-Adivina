@@ -1,0 +1,26 @@
+{ "type": "FeatureCollection",
+
+    "features": [
+    
+        { "type": "Feature",
+          "geometry": {"coordinates": [40.2459, -3.4209]},
+          "properties": {"name": "Madrid"}
+        },
+        
+        { "type": "Feature",
+          "geometry": {"coordinates": [52.3128, 13.2438]},        
+          "properties": {"name": "Berlín"}
+        },
+        
+        { "type": "Feature",
+          "geometry": {"coordinates": [48.5112, 2.2056]},        
+          "properties": {"name": "París"}
+        },
+        
+        { "type": "Feature",
+          "geometry": {"coordinates": [38.895, -77.036667]},        
+          "properties": {"name": "Washington D.C."}
+        }
+    ]   
+}
+

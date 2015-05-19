@@ -1,0 +1,56 @@
+/*!
+ * Start Bootstrap - Shop Homepage HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+body {
+    padding-top: 15px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    background-color: grey;
+}
+
+
+#puntuacion h1{
+
+    font-size: 22pt; 
+    color: red;  
+}
+
+#puntuacion h2{
+
+    font-size: 18pt;   
+}
+
+#puntuacion p{
+
+    font-size: 12pt;   
+}
+
+.slide-image {
+    width: 100%;
+}
+
+#map {
+    height: 450px;
+}
+
+#ultimosJuegos{
+    border-top: 3px dashed red;
+    border-right: 3px dashed red;
+    border-bottom: 3px dashed red;
+    border-left: 3px dashed red;
+    
+    background-color: white;
+}
+
+#map{
+    border-top: 4px solid black;
+    border-right: 4px solid black;
+    border-bottom: 4px solid black;
+    border-left: 4px solid black;
+}
+
+#puntuacion{
+    background-color: #9ACD32;
+}
+

@@ -1,0 +1,30 @@
+{ "type": "FeatureCollection",
+
+    "features": [
+    
+        { "type": "Feature",
+          "geometry": {"coordinates": [37.37016, -5.97656]},
+          "properties": {"name": "Sevilla"}
+        },
+        
+        { "type": "Feature",
+          "geometry": {"coordinates": [41.37681, 2.19727]},        
+          "properties": {"name": "Barcelona"}
+        },
+        
+        { "type": "Feature",
+          "geometry": {"coordinates": [39.45316, -0.36255]},        
+          "properties": {"name": "Valencia"}
+        },
+        
+        { "type": "Feature",
+          "geometry": {"coordinates": [39.85072, -4.021]},        
+          "properties": {"name": "Toledo"}
+        },
+        
+        { "type": "Feature",
+          "geometry": {"coordinates": [41.6565, -4.72412]},        
+          "properties": {"name": "Valladolid"}
+        }
+    ]   
+}

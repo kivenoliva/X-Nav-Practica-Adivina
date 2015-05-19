@@ -1,0 +1,30 @@
+{ "type": "FeatureCollection",
+
+    "features": [
+    
+        { "type": "Feature",
+          "geometry": {"coordinates": [40.00, -4.00]},
+          "properties": {"name": "España"}
+        },
+        
+        { "type": "Feature",
+          "geometry": {"coordinates": [61.52269, 45.87891]},        
+          "properties": {"name": "Rusia"}
+        },
+        
+        { "type": "Feature",
+          "geometry": {"coordinates": [50.95843, 10.37109]},        
+          "properties": {"name": "Alemania"}
+        },
+        
+        { "type": "Feature",
+          "geometry": {"coordinates": [47.5172, 2.10938]},        
+          "properties": {"name": "Francia"}
+        },
+        
+        { "type": "Feature",
+          "geometry": {"coordinates": [62.83509, 25.83984]},        
+          "properties": {"name": "Finlandia"}
+        }
+    ]   
+}
