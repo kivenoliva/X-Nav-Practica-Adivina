@@ -17,6 +17,7 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/juego.js"></script>
     <script src="js/leaflet.js"></script>
+    <script src="js/github.js"></script>
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/shop-homepage.css" rel="stylesheet">
@@ -68,6 +69,10 @@
                   
                   <button id = "parar" type="button" class="btn btn-default navbar-btn">Parar este juego</button>
                   
+                  <button id = "mostrarJuegos" type="button" class="btn btn-default navbar-btn">Juegos disponibles en GitHub</button>
+                  
+                  <button id = "volverAljuego" type="button" class="btn btn-default navbar-btn">Volver a opciones de juego</button>
+                  
                   <button id = "nuevo" type="button" class="btn btn-default navbar-btn">Juego nuevo</button>
               </div><!-- /.container-fluid -->
             </nav>                
@@ -88,17 +93,17 @@
     <div class="container">
         <!--Carrousel fotos -->
         <div id = "fotos" class="col-xs-12 col-md-6">
-            <img src="" name="banner" width='500' height='450' >
+            <img id = "dentroFoto" src="" name="banner" width='500' height='450' >
         </div>
         <!--FIN carrousel fotos -->
         
         <!--Mapa -->           
-        <div id = "map" class="col-md-6">
+        <div id = "map" class="col-xs-12 col-md-6">
              
         </div>
         <!-- FIN mapa -->
         
-        <div id = "puntuacion" class="col-md-6">
+        <div id = "puntuacion" class="col-xs-12 col-md-6">
             <h1>Lugar que representan las fotos: </h1>
             <h2 id="lugar"></h2>
             <h1>Distancia entre el lugar y tu respuesta: </h1>
@@ -110,10 +115,13 @@
             <p>(((Recuerda que tu puntuación será mejor cuanto más se acerque a 0)))</p>
         </div>
         
+        <div id = "Repo" class="col-xs-12 col-md-6">
+        </div>
+        
         <div class="col-md-1">
             
         </div>
-        <div id = "ultimosJuegos" class="col-md-5">
+        <div id = "ultimosJuegos" class="col-xs-12 col-md-5">
             <h1 class="lead">Ultimos juegos utilizados y puntuaciones</h1>
 
             <p><ul id = "ultimos" ></ul></p>

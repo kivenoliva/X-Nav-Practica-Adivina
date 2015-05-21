@@ -38,8 +38,10 @@
         $("#dificultad").hide();
         $("#seleccDif").hide();
         $("#TodosJuegos").hide();    
+        $("#mostrarJuegos").hide();
         $("#nuevo").hide(); 
         $("#ultimosJuegos").hide();  
+        $("#Repo").hide();
     };
     
     //funcion para cuando me seleccionan el juego de capitales
@@ -189,6 +191,31 @@
         history.go(num);
         retrasoGo = num;
     };
+    
+    //funcion que me hace falra en mostrarJuegosRepo que escribe los juegos que encuentra
+    function showFiles(error, contents) {
+        if (error) {
+            $("#contenidorepo").html("<p>Error code: " + error.error + "</p>");
+        } else {
+
+            var files = [];
+            for (var i = 0, len = contents.length; i < len; i++) {
+                files.push(contents[i].name);
+            };
+            $("#Repo").html("<p>Juegos:</p>" + "<ul id='files'><li>" + files.join("</li><li>") + "</li></ul>");
+
+        };
+    };
+       
+    //funcion que muestra los juegos disponibles en la app    
+    function mostrarJuegosRepo(){
+        
+        var github = new Github({});
+       
+        repo = github.getRepo("kivenoliva", "X-Nav-Practica-Adivina");
+        repo.contents('master', 'juegos', showFiles);
+    
+    };
                                                                                                              
 jQuery(document).ready(function() {
     
@@ -197,6 +224,8 @@ jQuery(document).ready(function() {
     $("#puntuacion").hide();
     $("#parar").hide();
     $("#nuevo").hide();
+    $("#volverAljuego").hide();
+    $("#Repo").hide();
   
   
     //Cargo el mapa ------------- Trabajo siempre con el mismo mapa cargado solo una vez ------------------------->
@@ -252,8 +281,10 @@ jQuery(document).ready(function() {
         $("#nuevo").hide();
         $("#seleccDif").show();
         $("#TodosJuegos").show();
+        $("#mostrarJuegos").show();
         $("#dificultad").show();
         $("#ultimosJuegos").show();
+        $("#Repo").hide();
         
     });
     
@@ -272,8 +303,10 @@ jQuery(document).ready(function() {
             $("#nuevo").show();
             $("#seleccDif").hide();
             $("#TodosJuegos").hide();
+            $("#mostrarJuegos").hide();
             $("#dificultad").hide();
             $("#ultimosJuegos").hide();
+            $("#Repo").hide();
             clearInterval(repeticion);
         
             //Preparo y saco las coordenadas que me han pulsado en numero.
@@ -330,9 +363,11 @@ jQuery(document).ready(function() {
         $("#nuevo").hide();
         $("#comienzo").show();
         $("#TodosJuegos").show();
+        $("#mostrarJuegos").show();
         $("#seleccDif").show();
         $("#dificultad").show();
         $("#ultimosJuegos").show();
+        $("#Repo").hide();
         history.pushState(null, '', 'JuegoNuevo');
         if (cambiosHistorial < 10){
             cambiosHistorial ++;
@@ -414,5 +449,37 @@ jQuery(document).ready(function() {
         }
            
     });   
+    
+    //Despues de ver los juegos disponibles en un repo de GitHub me pinchan para volver a jugar normal
+    $("#volverAljuego").click(function(){
+        $("#fotos").hide();
+        $("#respuesta").hide();
+        $("#puntuacion").hide();
+        $("#parar").hide();
+        $("#nuevo").hide();
+        $("#comienzo").show();
+        $("#TodosJuegos").show();
+        $("#seleccDif").show();
+        $("#dificultad").show();
+        $("#ultimosJuegos").show();
+        $("#mostrarJuegos").show();
+        $("#volverAljuego").hide();
+        $("#Repo").hide();
+    });
+    
+    //Me pulsan para ver los juegos disponibles en github
+    $("#mostrarJuegos").click(function(){
+        $("#mostrarJuegos").hide();
+        $("#comienzo").hide();
+        $("#puntuacion").hide();
+        $("#dificultad").hide();
+        $("#seleccDif").hide();
+        $("#TodosJuegos").hide();    
+        $("#nuevo").hide(); 
+        $("#ultimosJuegos").hide();  
+        $("#volverAljuego").show();
+        $("#Repo").show();
+        mostrarJuegosRepo();
+    });
     
 });

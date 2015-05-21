@@ -1,0 +1,14 @@
+{
+    "name": "Adivina",
+    "description": "Apliación para práctica final que consiste en el juego de adivinanzas",
+    "launch_path": "/index.html",
+    "icons": {
+        "128": "/map-icon.png"
+    },
+    "developer": {
+        "name": "Kevin Oliva Muñoz",
+        "url": "https://github.com/kivenoliva"
+    },
+    "default_locale": "en",
+    "chrome": { "navigation": true }
+}
